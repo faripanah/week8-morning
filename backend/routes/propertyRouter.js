@@ -9,10 +9,10 @@ const {
 
 const router = express.Router();
 
-router.get("/", getAllJobs);
-router.post("/", createJob);
-router.get("/:propertyId", getPropertyById);
-router.put("/:propertyId", updateProperty);
+router.get("/", getAllProperty);
+router.post("/", createProperty);
+ router.get("/:propertyId", getPropertyById);
+ router.put("/:propertyId", updateProperty);
 router.delete("/:propertyId", deleteProperty);
 
 module.exports = router;

@@ -151,4 +151,4 @@ const AddPropertyPage = () => {
   );
 };
 
-export default AddJobPage;
+export default AddPropertyPage;

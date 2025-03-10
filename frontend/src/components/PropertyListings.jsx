@@ -4,8 +4,8 @@ const PropertyListings = ({properties}) => {
   
   return (
     <div className="job-list">
-      {properties.map(p => (
-        <PropertyListing key={property._id} p={property} />
+      {properties.map(property=> (
+        <PropertyListing key={property._id} property={property} />
       ))}
     </div>
   );

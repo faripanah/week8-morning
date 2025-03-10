@@ -8,16 +8,20 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProperties = async () => {
+      
       try {
         const res = await fetch("/api/properties");
         if (!res.ok) {
           throw new Error("could not fetch the data for that resource");
         }
         const data = await res.json();
+       
+        console.log(isPending);
         setIsPending(false);
         setProperties(data);
         setError(null);
       } catch (err) {
+        console.log("errrro");
         setIsPending(false);
         setError(err.message);
       }
@@ -30,7 +34,7 @@ const Home = () => {
     <div className="home">
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
-      {jobs && <PropertyListings properties={properties} />}
+      {properties && <PropertyListings properties={properties} />}
     </div>
   );
 };

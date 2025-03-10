@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const propertyPage = () => {
+const PropertyPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [property, setProperty] = useState(null);

@@ -18,9 +18,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/properties/add-property" element={<AddPropertyPage />} />
-              <Route
-              path="/edit-property/:id"
-              element={ <EditPropertyPage />}/>
+              <Route path="/edit-property/:id" element={ <EditPropertyPage />}/>
               <Route path="/properties/:id" element={<PropertyPage />} />             
               <Route path='*' element={<NotFoundPage />} />
             </Routes>
