@@ -18,7 +18,7 @@ const AddPropertyPage = () => {
   const navigate = useNavigate();
   const addProperty = async (newProperty) => {
     try {
-      const res = await fetch("/property/properties", {
+      const res = await fetch("/api/properties", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -145,7 +145,7 @@ const AddPropertyPage = () => {
 
         
 
-        <button>Add Job</button>
+        <button>Add Property</button>
       </form>
     </div>
   );
